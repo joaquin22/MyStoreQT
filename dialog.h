@@ -11,6 +11,10 @@ class Dialog : public QDialog
 {
     Q_OBJECT
 
+
+signals:
+    void refreshView();
+
 public:
     explicit Dialog(QWidget *parent = nullptr);
     ~Dialog();

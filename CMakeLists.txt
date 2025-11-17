@@ -27,6 +27,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         dialog.h dialog.cpp dialog.ui
         store.h store.cpp
         Product.h
+        mycartdialog.h mycartdialog.cpp mycartdialog.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET MyStore APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

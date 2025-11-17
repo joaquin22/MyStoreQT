@@ -13,13 +13,19 @@ class Store
 {
 
 public:
-    Store();
+    Store(const Store&) = delete;
+    Store& operator=(const Store&) = delete;
+
+    static Store* getInstance();
+
     void saveJson(const Product & product, const std::string& fileName);
+    json readJson(const std::string& fileName);
+
 
 private:
-    std::string name;
-    std::string stock;
-    std::string price;
+    inline static Store* instance{nullptr};
+    Store() = default;
+    ~Store() = default;
 };
 
 #endif // STORE_H

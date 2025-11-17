@@ -36,7 +36,7 @@
            <string>Agregar Productos</string>
           </property>
          </widget>
-         <widget class="QPushButton" name="pushButton_2">
+         <widget class="QPushButton" name="myCart">
           <property name="text">
            <string>Ver carrito</string>
           </property>
@@ -55,7 +55,7 @@
            <x>0</x>
            <y>0</y>
            <width>832</width>
-           <height>546</height>
+           <height>567</height>
           </rect>
          </property>
          <layout class="QGridLayout" name="gridLayout_3">
@@ -73,16 +73,6 @@
      </layout>
     </item>
    </layout>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>854</width>
-     <height>21</height>
-    </rect>
-   </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

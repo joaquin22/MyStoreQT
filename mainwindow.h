@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <string>
+#include "json.hpp"
 
 QT_BEGIN_NAMESPACE
 namespace Ui
@@ -20,6 +22,9 @@ public:
 
 private slots:
     void on_addProducts_clicked();
+    void refreshView();
+
+    void on_myCart_clicked();
 
 private:
     Ui::MainWindow *ui;

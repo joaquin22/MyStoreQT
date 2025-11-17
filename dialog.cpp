@@ -2,6 +2,7 @@
 #include "ui_dialog.h"
 #include "store.h"
 #include "Product.h"
+#include <QPushButton>
 
 #include <string>
 
@@ -10,6 +11,9 @@ Dialog::Dialog(QWidget *parent)
     , ui(new Ui::Dialog)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Agregar producto");
+    ui->buttonBox->button(QDialogButtonBox::Ok)->setText("Guardar");
+    ui->buttonBox->button(QDialogButtonBox::Cancel)->setText("Cancelar");
 }
 
 Dialog::~Dialog()
@@ -19,7 +23,7 @@ Dialog::~Dialog()
 
 void Dialog::on_buttonBox_accepted()
 {
-    Store *store = new Store();
+    Store* store = Store::getInstance();
     std::string name = ui->input_name->text().toStdString();
     std::string stock = ui->input_stock->text().toStdString();
     std::string price = ui->input_price->text().toStdString();
@@ -28,5 +32,8 @@ void Dialog::on_buttonBox_accepted()
         name,stock,price
     };
     store->saveJson(product,"productos.json");
+
+    emit refreshView();
+     accept();
 }
 
